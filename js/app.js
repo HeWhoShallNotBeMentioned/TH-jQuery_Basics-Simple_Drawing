@@ -33,8 +33,15 @@ $("input[type=range]").change(changeColor);
   //update the new color span
 
 //When "Add Color" is pressed
+$("#addNewColor").click(function(){
   //Append the color to the controls ul
+  var $newColor = $("<li></li>");
+  $newColor.css("background-color", $("#newColor").css("background-color"));
+  $(".controls ul").append($newColor);
   //Select the new color
+  $newColor.click();
+});
+
 
 //On mouse events on the canvas
   //Draw lines
